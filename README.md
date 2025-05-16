@@ -13,35 +13,35 @@ Below are the portfolio designs recreated from Figma. Click the preview image or
 
 ### Template 1
 
-[![Template 1 Preview](./designs/design-1.png)](#template-1)  
+[![Template 1 Preview](./design-previews/design-1.png)](#template-1)  
 [View Live Demo](#template-1) IS TO BE ADDED
 
 ---
 
 ### Template 2
 
-[![Template 2 Preview](./designs/design-2.png)](#template-2)  
+[![Template 2 Preview](./design-previews/design-2.png)](#template-2)  
 [View Live Demo](#template-2) IS TO BE ADDED
 
 ---
 
 ### Template 3
 
-[![Template 3 Preview](./designs/design-3.png)](#template-3)  
+[![Template 3 Preview](./design-previews/design-3.png)](#template-3)  
 [View Live Demo](#template-3) IS TO BE ADDED
 
 ---
 
 ### Template 4
 
-[![Template 4 Preview](./designs/design-4.png)](#template-4)  
+[![Template 4 Preview](./design-previews/design-4.png)](#template-4)  
 [View Live Demo](#template-4) IS TO BE ADDED
 
 ---
 
 ### Template 5
 
-[![Template 5 Preview](./designs/design-5.png)](#template-5)  
+[![Template 5 Preview](./design-previews/design-5.png)](#template-5)  
 [View Live Demo](#template-5) IS TO BE ADDED
 
 ## License
