@@ -1,6 +1,6 @@
 :root {
     --primary-orange: #fd6f00;
-    --secondary-black: #000000;
+    --primary-black: #000000;
 
     --orange-50: #ffefe6;
     --on-orange-50: #000000;
@@ -57,4 +57,46 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Brand - Logo section in Header */
+.brand {
+    padding-block: 0.5em;
+    display: inline-flex;
+    position: relative;
+}
+img.brand__name--large {
+    object-fit: contain;
+}
+.brand__stamp {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 60px;
+    position: absolute;
+    top: 0;
+    right: 0.5em;
+}
+.brand__picture {
+    object-fit: contain;
+    width: 90%;
+    border-radius: 50%;
+    box-shadow: 0 0 3em 0.5em var(--orange-300);
+}
+img.brand__name {
+    width: 100%;
+    margin-top: 0.35em;
+    object-fit: contain;
+}
+.brand__name {
+    font-size: var(--font-sm);
+}
+.brand__designation {
+    text-transform: lowercase;
+    font-family:  sans-serif;
+    text-wrap: nowrap;
+    /* font-size: var(--font-xs); */
+    font-size: 0.5em;
+    color: var(--black-300);
 }
