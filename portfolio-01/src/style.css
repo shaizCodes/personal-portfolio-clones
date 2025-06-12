@@ -1,0 +1,60 @@
+:root {
+    --primary-orange: #fd6f00;
+    --secondary-black: #000000;
+
+    --orange-50: #ffefe6;
+    --on-orange-50: #000000;
+    --orange-100: #ffcfb0;
+    --on-orange-100: #000000;
+    --orange-200: #ffb78a;
+    --on-orange-200: #000000;
+    --orange-300: #ff9654;
+    --on-orange-300: #000000;
+    --orange-400: #ff8233;
+    --on-orange-400: #000000;
+    --orange-500: #ff6300;
+    --on-orange-500: #000000;
+    --orange-600: #e85a00;
+    --on-orange-600: #000000;
+    --orange-700: #b54600;
+    --on-orange-700: #ffffff;
+    --orange-800: #8c3600;
+    --on-orange-800: #ffffff;
+    --orange-900: #6b2a00;
+    --on-orange-900: #ffffff;
+
+    --black-50: #e6e6e6;
+    --on-black-50: #000000;
+    --black-100: #b0b0b0;
+    --on-black-100: #000000;
+    --black-200: #8a8a8a;
+    --on-black-200: #000000;
+    --black-300: #545454;
+    --on-black-300: #ffffff;
+    --black-400: #333333;
+    --on-black-400: #ffffff;
+    --black-500: #000000;
+    --on-black-500: #ffffff;
+
+    --font-base: 18px;
+    --font-sm: 14px;
+    --font-xs: 12px;
+    --font-scale: 1.25;
+    --font-size-1: calc(var(--font-base) * var(--font-scale));
+    --font-size-2: calc(var(--font-size-1) * var(--font-scale));
+    --font-size-3: calc(var(--font-size-2) * var(--font-scale));
+    --font-size-4: calc(var(--font-size-3) * var(--font-scale));
+    --font-size-5: calc(var(--font-size-4) * var(--font-scale));
+    --font-size-6: calc(var(--font-size-5) * var(--font-scale));
+    --font-size-7: calc(var(--font-size-6) * var(--font-scale));
+
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--font-base);
+    line-height: 1.25;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
