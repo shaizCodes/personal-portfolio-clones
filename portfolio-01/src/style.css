@@ -1,5 +1,6 @@
 :root {
     --primary-orange: #fd6f00;
+    --on-primary-orange: #ffffff;
     --primary-black: #000000;
 
     --orange-50: #ffefe6;
@@ -59,11 +60,20 @@
     box-sizing: border-box;
 }
 
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    padding: 2em;
+    gap: 2em;
+}
+
 /* Brand - Logo section in Header */
 .brand {
     padding-block: 0.5em;
     display: inline-flex;
     position: relative;
+    max-width: 250px;
 }
 img.brand__name--large {
     object-fit: contain;
@@ -99,4 +109,61 @@ img.brand__name {
     /* font-size: var(--font-xs); */
     font-size: 0.5em;
     color: var(--black-300);
+}
+
+/* Navigation - Header */
+.nav,
+.nav__list,
+.nav__actions {
+    display: inline-flex;
+}
+
+.nav {
+    flex-grow: 1;
+    gap: 2em;
+}
+
+.nav__list {
+    list-style-type: none;
+    flex-grow: 1;
+    gap: 1.5em;
+    justify-content: flex-end;
+}
+.nav__item {
+    display: inline-flex;
+    align-items: center;
+    text-wrap: nowrap;
+    align-content: flex-start;
+}
+.nav__link {
+    text-decoration: none;
+    font-weight: 100;
+    color: var(--black-500);
+    padding: 0.5em;
+    border-radius: 0.25em;
+}
+.nav__button {
+    text-decoration: none;
+    text-wrap: nowrap;
+    font-weight: 100;
+    padding: 0.5em;
+    border-radius: 0.25em;
+}
+.button {
+    padding: 0.5em;
+    border-radius: 0.25em;
+}
+.button--primary {
+    background-color: var(--primary-orange);
+    color: var(--on-primary-orange);
+}
+.nav__link:hover {
+    color: var(--orange-500);
+    background-color: var(--orange-50);
+}
+.nav__button:hover {
+    color: var(--primary-orange);
+    background-color: var(--black-50);
+    scale: 1.05;
+    transition: scale 0.2s ease-in-out;
 }
