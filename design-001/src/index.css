@@ -160,8 +160,31 @@ html {
     font-weight: 400;
 }
 
+.link:hover,
+.button:hover {
+  text-decoration: underline;
+  color: var(--orange-primary);
+  background-color: var(--orange-50);
+}
+
 .button--primary {
     background-color: var(--orange-primary);
     color: #FFFFFF;
     border-radius: 4px;
+}
+
+.button--primary:hover {
+  color: var(--orange-primary);
+  background-color: var(--black-primary);
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1150px) {
+  .header__nav {
+      /* Header Navigation breaks when the screen size is reduced than 1150px */
+      /* TODO: style it later as well as update the template accordingly */
+      display: none;
+  }
+  
 }
