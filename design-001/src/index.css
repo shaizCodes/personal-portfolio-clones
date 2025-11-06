@@ -98,3 +98,9 @@ html {
     */
     font: normal normal bold var(--font-size-base)/var(--line-height-base) var(--font-family-base);
 }
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
