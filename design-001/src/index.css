@@ -104,3 +104,64 @@ html {
     padding: 0;
     margin: 0;
 }
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.max-width-container {
+    margin-inline: auto;
+    display: flex;
+    flex-grow: 1;
+    padding-inline: 2rem;
+    max-width: 1480px;
+}
+
+.brand {
+    display: inline-flex;
+}
+
+.brand__logo {
+    height: 120px;
+    object-fit: contain;
+    display: block;
+}
+
+.header__nav {
+    display: inline-flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.nav__links,
+.nav__buttons {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-end;
+}
+
+.nav__link,
+.nav__button {
+    display: flex;
+}
+
+.link,
+.button {
+    white-space: nowrap;
+    padding: 0.5rem 0.5rem;
+    color: var(--black-primary);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.button--primary {
+    background-color: var(--orange-primary);
+    color: #FFFFFF;
+    border-radius: 4px;
+}
