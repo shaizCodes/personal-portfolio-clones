@@ -180,11 +180,81 @@ html {
   text-decoration: none;
 }
 
+.header__nav {
+  align-items: center;
+}
+
+.nav__toggle-button {
+    display: none !important;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 1150px) {
-  .header__nav {
-      /* Header Navigation breaks when the screen size is reduced than 1150px */
-      /* TODO: style it later as well as update the template accordingly */
-      display: none;
+  .nav__toggle-button {
+    display: flex !important;
   }
-  
+  .nav__toggle-button:hover {
+    background-color: var(--orange-300) !important;
+  }
+  .brand__logo {
+    height: 80px;
+  }
+  .max-width-container {
+    padding-inline: 1rem;
+    align-items: center;
+  }
+  .header__nav.open {
+    flex-wrap: nowrap;
+    height: fit-content;
+    min-height: 100vh;
+    gap: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem;
+    max-width: 480px;
+    min-width: 250px;
+    background-color: var(--orange-primary);
+  }
+  .header__nav:not(.open) .nav__links,
+  .header__nav:not(.open) .nav__buttons {
+    display: none;
+  }
+  .header__nav.open .nav__links,
+  .header__nav.open .nav__buttons {
+    flex-direction: column;
+    align-content: stretch;
+    gap: 0;
+  }
+  .header__nav.open .link,
+  .header__nav.open .button {
+    flex-grow: 1;
+    text-align: center;
+  }
+  .header__nav.open .nav__buttons {
+    margin-top: auto;
+  }
+  .header__nav .button {
+    color: var(--black-primary);
+    background-color: var(--orange-100);
+  }
+  .header__nav .link:hover,
+  .nav__toggle-button:hover {
+    background-color: var(--orange-400);
+    color: var(--black-primary);
+  }
+  .header__nav .button:hover {
+    background-color: var(--black-primary);
+    color: var(--orange-100);
+  }
+  .nav__toggle-button {
+    order: -1;
+    align-self: flex-end;
+    display: flex;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
 }

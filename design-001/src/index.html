@@ -8,6 +8,8 @@
     <meta name="keywords" content="portfolio, clones, design, personal">
     <meta name="author" content="Shahzad">
     <link rel="stylesheet" href="./index.css">
+    <!-- Google Icons -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -27,6 +29,19 @@
                 <ul class="nav__buttons">
                     <li class="nav__button"><a class="button button--primary" role="button" href="#">Download CV</a></li>
                 </ul>
+                <span role="button" class="material-icons nav__toggle-button" id="nav__toggle-button">menu</span>
+                <script>
+                    const navMenuBtn = document.getElementById("nav__toggle-button");
+                    navMenuBtn.addEventListener('click', ()=>{
+                        if (navMenuBtn.innerText === "menu") {
+                            navMenuBtn.innerText = "close";
+                            document.querySelector(".header__nav").classList.add("open");
+                        } else {
+                            navMenuBtn.innerText = "menu";
+                            document.querySelector(".header__nav").classList.remove("open");
+                        }
+                    });
+                </script>
             </nav>
         </div>
     </header>
