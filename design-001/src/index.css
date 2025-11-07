@@ -303,10 +303,12 @@ section {
   gap: 2rem;
 }
 
-.services__section .text__content {
+.services__section .text__content,
+.projects__section .text__content {
   display: flex;
   max-width: 740px;
   text-align: center;
+  margin-inline: auto;
 }
 .services {
   list-style: none;
@@ -331,6 +333,79 @@ section {
 .service__description {
   font-size: var(--font-size-2);
   font-weight: 400;
+}
+
+.projects__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+.categories {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.chip {
+  background-color: #F8F8F8;
+  border-radius: 12px;
+  border: 1px solid var(--black-300);
+  padding: 0.5rem 1rem;
+  font-size: var(--font-size-3);
+  font-weight: 400;
+}
+.chip--primary {
+  background-color: var(--orange-primary);
+  color: #FFFFFF;
+  border: none;
+}
+.chip:hover {
+  cursor: pointer;
+  background-color: var(--orange-100);
+  border-color: var(--orange-300);
+}
+.chip--primary:hover {
+  background-color: #FFFFFF;
+  color: var(--orange-primary);
+  border: 1px solid var(--orange-300);
+}
+
+.projects {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  height: fit-content;
+  gap: 2rem;
+}
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+.project__preview {
+  order: -2;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.project__preview img {
+  width: 100%;
+  object-fit: cover;
+}
+.project__category {
+  font-size: var(--font-size-2);
+  font-weight: 400;
+  color: var(--orange-primary);
+  order: -1;
+  padding-inline: 0.5rem;
+  white-space: nowrap;
+}
+.project__title {
+  font-size: var(--font-size-4);
+  padding-inline: 0.5rem;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 1190px) {
@@ -410,7 +485,8 @@ section {
 @media screen and (max-width: 970px) {
   .hero,
   .about-me,
-  .services__section {
+  .services__section,
+  .projects__section {
     grid-template-columns: 1fr;
     text-align: center;
     height: auto;
