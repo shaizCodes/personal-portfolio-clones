@@ -389,10 +389,12 @@ section {
   order: -2;
   overflow: hidden;
   border-radius: 10px;
+  height: 400px;
 }
 .project__preview img {
   width: 100%;
   object-fit: cover;
+  height: 100%;
 }
 .project__category {
   font-size: var(--font-size-2);
