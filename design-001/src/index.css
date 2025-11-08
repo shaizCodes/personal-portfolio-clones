@@ -439,8 +439,6 @@ section {
   flex: 1 0 60%;
   justify-content: center;
 }
-/* .testimonial:not(.active):nth-child(odd) {order: 1;}
-.testimonial:not(.active):nth-child(even) {order: -1;} */
 .testimonial.active {
   order: 0;
 }
