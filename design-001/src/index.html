@@ -276,5 +276,21 @@
             <p class="footer__copyrights">&copy; 2023 <span class="color--primary">FawziUiUx</span> All Rights Reserved , Inc. <br><a href="https://github.com/shaizCodes/personal-portfolio-clones" style="color: white;;">You can get the GitHub source code from here...</a></p>
         </footer>
     </main>
+
+    <script>
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+            if (event.matches) {
+                const brandLogos = document.querySelectorAll('.brand__logo');
+                brandLogos.forEach(logo => {
+                    logo.src = './assets/brand-logo-dark.svg';
+                });
+            } else {
+                const brandLogos = document.querySelectorAll('.brand__logo');
+                brandLogos.forEach(logo => {
+                    logo.src = './assets/brand-logo.svg';
+                });
+            }
+        });
+    </script>
 </body>
 </html>

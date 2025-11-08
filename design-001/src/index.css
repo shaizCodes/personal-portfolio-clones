@@ -698,3 +698,29 @@ section {
     align-items: flex-start;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  body,
+  .footer {
+    background-color: #1E1E1E;
+    color: white;
+  }
+  .footer__copyrights {
+    background-color: #121212;
+  }
+  .link,
+  .button,
+  .form__field {
+    color: #FFFFFF;
+  }
+  .service__title,
+  .service__description,
+  .chip,
+  .persona__info,
+  .persona__message {
+    color: black;
+  }
+  .chip--primary {
+    color: #FFFFFF;
+  }
+}
