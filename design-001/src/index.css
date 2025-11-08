@@ -156,12 +156,25 @@ html {
 }
 
 .link,
-.button {
+.button,
+.form__field {
   white-space: nowrap;
   padding: 0.5rem 0.5rem;
   color: var(--black-primary);
   text-decoration: none;
   font-weight: 400;
+  border: none;
+}
+.form__field {
+  border: 1px solid var(--black-300);
+  border-radius: 4px;
+  color: #AFAFAF;
+  background-color: #F8F8F8;
+  accent-color: #797979;
+}
+.form__field:focus {
+  outline: 2px solid var(--orange-primary);
+  border: none;
 }
 
 .link:hover,
@@ -310,7 +323,8 @@ section {
 
 .services__section .text__content,
 .projects__section .text__content,
-.testimonials_section .text__content {
+.testimonials_section .text__content,
+.contact__section .text__content {
   display: flex;
   max-width: 740px;
   text-align: center;
@@ -515,6 +529,26 @@ section {
   font-size: var(--font-size-2);
   font-weight: 400;
 }
+
+.contact__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+}
+.contact__form {
+  display: flex;
+  gap: 1rem;
+  width: 56vw;
+  max-width: 740px;
+  margin-inline: auto;
+}
+.form__field {
+  flex-grow: 1;
+  padding: 0.5rem;
+}
+
 @media screen and (max-width: 1190px) {
   .nav__toggle-button {
     display: flex !important;
