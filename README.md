@@ -14,7 +14,7 @@ Below are the portfolio designs recreated from Figma. Click the preview image or
 ### Template 1
 
 [![Template 1 Preview](./design-previews/design-1.png)](#template-1)  
-[View Live Demo](./design-001/src/)
+[Live Preview](https://shaizcodes.github.io/personal-portfolio-clones/design-001/src/) & [Source Code](./design-001/src/)
 
 ---
 
