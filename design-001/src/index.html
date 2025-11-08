@@ -184,7 +184,7 @@
                 </li>
                 <li class="testimonial">
                     <figure class="persona">
-                        <img class="persona__image" src="./assets/persona-01.png" alt="Portrait of a person">
+                        <img class="persona__image" src="./assets/persona-02.png" alt="Portrait of a person">
                         <figure class="text__body">
                             <blockquote class="quotation">
                                 <p class="persona__message"><span class="quotation__symbol">“</span><span>Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.</span><span class="quotation__symbol">“</span></p>
@@ -197,7 +197,7 @@
                 </li>
                 <li class="testimonial">
                     <figure class="persona">
-                        <img class="persona__image" src="./assets/persona-01.png" alt="Portrait of a person">
+                        <img class="persona__image" src="./assets/persona-03.png" alt="Portrait of a person">
                         <figure class="text__body">
                             <blockquote class="quotation">
                                 <p class="persona__message"><span class="quotation__symbol">“</span><span>Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.</span><span class="quotation__symbol">“</span></p>
@@ -209,6 +209,37 @@
                     </figure>
                 </li>
             </ul>
+            <div id="testimonial__controls" class="testimonial__controls">
+                <script>
+                    function orderTestimonialItems() {
+                        const testimonialItems = document.querySelectorAll(".testimonials .testimonial:not(.active)");
+                        testimonialItems.forEach((item, index)=>{
+                            item.style.order = testimonialItems.length === index+1 ? -1 : index+1;
+                        });
+                    }
+                    const testimonialControlsContainer = document.getElementById("testimonial__controls");
+                    const testimonialItems = document.querySelectorAll(".testimonials .testimonial");
+                    testimonialItems.forEach((item, index)=>{
+                        orderTestimonialItems();
+                        const button = document.createElement("button");
+                        button.classList.add("testimonial__control-button");
+                        if (item.classList.contains("active")) {
+                            button.classList.add("testimonial__control-button--active");
+                        }
+                        button.addEventListener('click', ()=>{
+                            document.querySelector(".testimonial__control-button--active").classList.remove("testimonial__control-button--active");
+                            button.classList.add("testimonial__control-button--active");
+                            let activeElement = document.querySelector(".testimonials .testimonial.active");
+                            activeElement.classList.remove("active");
+                            item.classList.add("active");
+                            item.style.order = 0;
+                            orderTestimonialItems();
+                            // activeElement.style.order = index;
+                        });
+                        testimonialControlsContainer.appendChild(button);
+                    });
+                </script>
+            </div>
         </section>
     </main>
 </body>
