@@ -435,6 +435,14 @@ section {
   flex: 1 0 68%;
   justify-content: center;
 }
+.testimonial:nth-child(odd) {order: -1;}
+.testimonial:nth-child(even) {order: 1;}
+.testimonial.active {
+  order: 0;
+}
+.testimonial:not(.active) {
+  opacity: 0.5;
+}
 .persona {
   border-radius: 12px;
   display: flex;
