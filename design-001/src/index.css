@@ -212,6 +212,9 @@ html {
 section {
   align-items: center;
   padding-bottom: 5rem;
+  padding-block: 2rem;
+  justify-content: center;
+  min-height: 600px;
 }
 
 .hero {
