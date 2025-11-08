@@ -427,7 +427,6 @@ section {
   list-style: none;
   display: flex;
   max-width: inherit;
-  /* overflow: hidden; */
   justify-content: center;
   gap: 1rem;
 }
@@ -443,7 +442,6 @@ section {
   background-color: #F8F8F8;
   gap: 1rem;
   align-items: space-between;
-  /* width: 80%; */
 }
 .persona .text__body {
   display: flex;
