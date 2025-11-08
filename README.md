@@ -14,7 +14,7 @@ Below are the portfolio designs recreated from Figma. Click the preview image or
 ### Template 1
 
 [![Template 1 Preview](./design-previews/design-1.png)](#template-1)  
-[View Live Demo](#template-1) IS TO BE ADDED
+[View Live Demo](./design-001/src/)
 
 ---
 
