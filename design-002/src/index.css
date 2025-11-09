@@ -38,7 +38,8 @@
 .hero .testimonial::before,
 .hero .experience,
 .hero .experience__count::before,
-.hero__image .image {
+.hero__image .image,
+.hero__cta {
     position: absolute;
 }
 
@@ -48,6 +49,7 @@
     text-align: center;
     justify-content: center;
     padding-block-start: 2rem;
+    overflow: hidden;
 }
 .chip {
     display: inline-flex;
@@ -55,7 +57,9 @@
     color: var(--secondary-color);
     font-weight: 400;
 }
-.chip__content {
+
+.chip__content,
+.hero__cta .cta {
     padding: 0.5rem 1rem;
 }
 .chip__content::after {
@@ -64,10 +68,13 @@
     right: -1.5rem;
 }
 
+.header__nav,
+.hero__heading {
+    padding-inline: 3rem;
+}
 .hero__heading {
     font-size: 4rem;
     max-width: 600px;
-    padding-inline: 3rem;
 }
 .hero__heading::after {
     content: url(./assets/decorator-01-lines.svg);
@@ -87,7 +94,9 @@
 .nav__link,
 .link,
 .hero,
-.hero__image {
+.hero__image,
+.hero .experience,
+.hero__cta {
     display: flex;
 }
 .header,
@@ -98,14 +107,17 @@
 
 .header__nav .nav__links,
 .header__nav .link,
-.chip {
+.chip,
+.hero__cta,
+.hero__cta .cta {
     border-radius: 100px;
 }
 
 .nav__links,
 .hero .chip,
 .hero .testimonial,
-.hero .experience {
+.hero .experience,
+.hero__cta {
     font-family: var(--primary-font-family);
 }
 
@@ -117,25 +129,39 @@
 
 .header__nav {
     justify-content: center;
-    padding: 1rem 3rem;
+    padding-block: 1rem;
 }
 
+.nav__links,
+.hero__cta {
+    padding: 6px;
+}
+
+.hero__cta {
+    background-color: rgba(256, 256, 256, 0.2);
+    bottom: 2rem;
+    border: 2px solid #C9C9C9;
+    gap: 0.5rem;
+    font-weight: 300;
+}
 .nav__links {
     background-color: var(--secondary-color);
-    padding: 6px;
     flex-grow: 1;
     justify-content: space-between;
 }
 
-.header__nav .link {
+.link {
     text-decoration: none;
     align-items: center;
+    color: var(--on-secondary-color);
     padding: 0.5rem 2rem;
     background-color: var(--secondary-color);
-    color: var(--on-secondary-color);
 }
-.header__nav .link:hover,
-.header__nav .link.active {
+.hero__cta .cta {
+    background-color: transparent;
+}
+.link:hover,
+.link.active {
     background-color: var(--primary-color);
     color: var(--on-primary-color);
 }
@@ -167,7 +193,6 @@
 .hero .experience {
     right: 3rem;
     top: 60%;
-    display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
@@ -193,4 +218,17 @@
     width: 600px;
     object-fit: cover;
     bottom: 0;
+}
+
+.hero__image::after {
+    content: '+';
+    position: relative;
+    background-color: #FEB273;
+    top: 88px;
+    left: 12px;
+    z-index: -1;
+    width: 500px;
+    height: 500px;
+    border-radius: 100%;
+    margin-inline: auto;
 }
