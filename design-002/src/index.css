@@ -1,8 +1,80 @@
 @import url('https://fonts.cdnfonts.com/css/lufga');
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --primary-font-family: 'Lufga', sans-serif;
+    --secondary-font-family: 'Urbanist', sans-serif;
+    --primary-color: #FD853A;
+    --secondary-color: #171717;
+    --on-primary-color: #FFFFFF;
+    --on-secondary-color: #FFFFFF;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+.max-width-limit {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.header,
+.header__nav,
+.nav__links,
+.nav__link,
+.link {
+    display: flex;
+}
+.header,
+.header__nav,
+.nav {
+    flex-grow: 1;
+}
+
+.header__nav .nav__links,
+.header__nav .link {
+    border-radius: 100px;
+}
+
+.header__nav {
+    justify-content: center;
+    padding: 1rem 3rem;
+}
+
+.nav__links {
+    background-color: var(--secondary-color);
+    font-family: var(--primary-font-family);
+    padding: 6px;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.header__nav .link {
+    text-decoration: none;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background-color: var(--secondary-color);
+    color: var(--on-secondary-color);
+}
+.header__nav .link:hover,
+.header__nav .link.active {
+    background-color: var(--primary-color);
+    color: var(--on-primary-color);
+}
+.header__nav .link.active {
+    font-weight: bold;
+}
+.brand__link .link {
+    padding: 0;
+}
+.brand__logo {
+    height: 50px;
+}
+.header__nav .nav__link:nth-child(2),
+.header__nav .nav__link:nth-child(3),
+.header__nav .nav__link:nth-child(4) {
+    order: -1;
 }
