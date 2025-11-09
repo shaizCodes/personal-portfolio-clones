@@ -25,44 +25,54 @@
     color: var(--primary-color);
 }
 
+.hero,
+.chip__content,
+.hero__heading,
+.hero__image {
+    position: relative;
+}
+
+.chip__content::after,
+.hero__heading::after,
+.hero .testimonial,
+.hero .testimonial::before,
+.hero .experience,
+.hero .experience__count::before,
+.hero__image .image {
+    position: absolute;
+}
+
 .hero {
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: center;
-    border: 1px solid blue;
-    padding-block: 2rem;
+    padding-block-start: 2rem;
 }
 .chip {
     display: inline-flex;
     border: 1px solid var(--secondary-color);
     color: var(--secondary-color);
-    font-family: var(--primary-font-family);
     font-weight: 400;
 }
 .chip__content {
     padding: 0.5rem 1rem;
-    position: relative;
 }
 .chip__content::after {
-    content: url(./assets/decorator-01.svg);
-    position: absolute;
+    content: url(./assets/decorator-01-lines.svg);
     top: -1.5rem;
     right: -1.5rem;
 }
 
 .hero__heading {
-    font-family: var(--secondary-font-family);
     font-size: 4rem;
     max-width: 600px;
     padding-inline: 3rem;
-    position: relative;
 }
 .hero__heading::after {
-    content: url(./assets/decorator-01.svg);
+    content: url(./assets/decorator-01-lines.svg);
     display: inline-block;
     transform: rotate(180deg) scale(2);
-    position: absolute;
     left: 1rem;
     bottom: -4rem;
 }
@@ -76,7 +86,8 @@
 .nav__links,
 .nav__link,
 .link,
-.hero {
+.hero,
+.hero__image {
     display: flex;
 }
 .header,
@@ -91,6 +102,19 @@
     border-radius: 100px;
 }
 
+.nav__links,
+.hero .chip,
+.hero .testimonial,
+.hero .experience {
+    font-family: var(--primary-font-family);
+}
+
+.hero__heading,
+.experience__count {
+    font-family: var(--secondary-font-family);
+    font-weight: bold;
+}
+
 .header__nav {
     justify-content: center;
     padding: 1rem 3rem;
@@ -98,7 +122,6 @@
 
 .nav__links {
     background-color: var(--secondary-color);
-    font-family: var(--primary-font-family);
     padding: 6px;
     flex-grow: 1;
     justify-content: space-between;
@@ -129,4 +152,45 @@
 .header__nav .nav__link:nth-child(3),
 .header__nav .nav__link:nth-child(4) {
     order: -1;
+}
+
+.hero .testimonial {
+    left: 3rem;
+    top: 60%;
+    width: 280px;
+    text-align: left;
+}
+.hero .testimonial::before {
+    content: url(./assets/decorator-02-quotes.svg);
+    top: -3rem;
+}
+.hero .experience {
+    right: 3rem;
+    top: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.hero .experience .experience__count {
+    font-size: 2.65rem;
+    display: block;
+}
+.hero .experience__count::before {
+    content: '';
+    background-image: url(./assets/decorator-03-star.svg);
+    background-repeat: space;
+    background-size: 28px 28px;
+    width: 140px;
+    height: 32px;
+    top: -2.5rem;
+    right: 0;
+}
+.hero__image {
+    width: 600px;
+    height: 340px;
+}
+.hero__image .image {
+    width: 600px;
+    object-fit: cover;
+    bottom: 0;
 }
