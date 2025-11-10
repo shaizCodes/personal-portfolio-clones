@@ -21,7 +21,9 @@
     margin: 0 auto;
 }
 
-.color--primary {
+.color--primary,
+.social__account .icon:hover,
+.footer__section__heading {
     color: var(--primary-color);
 }
 
@@ -43,9 +45,13 @@
     position: absolute;
 }
 
-.hero {
-    flex-direction: column;
+.hero,
+.link,
+.footer__cta {
     align-items: center;
+}
+
+.hero {
     text-align: center;
     justify-content: center;
     padding-block-start: 2rem;
@@ -59,7 +65,8 @@
 }
 
 .chip__content,
-.hero__cta .cta {
+.hero__cta .cta,
+.footer__cta .cta {
     padding: 0.5rem 1rem;
 }
 .chip__content::after {
@@ -69,7 +76,8 @@
 }
 
 .header__nav,
-.hero__heading {
+.hero__heading,
+.footer {
     padding-inline: 3rem;
 }
 .hero__heading {
@@ -84,10 +92,6 @@
     bottom: -4rem;
 }
 
-.hero .chip {
-    order: -1;
-}
-
 .header,
 .header__nav,
 .nav__links,
@@ -96,20 +100,52 @@
 .hero,
 .hero__image,
 .hero .experience,
-.hero__cta {
+.hero__cta,
+.footer,
+.footer__cta,
+.footer__body,
+.footer__section,
+.social__accounts,
+.social__account,
+.footer__links,
+.footer__link,
+.subscription-form,
+.footer__copyrights,
+.footer__copyrights .footer__links {
     display: flex;
 }
+
+.hero,
+.hero .experience,
+.footer,
+.footer__section,
+:not(.footer__copyrights) > .footer__links {
+    flex-direction: column;
+}
+
 .header,
 .header__nav,
-.nav {
+.nav,
+.nav__links,
+.footer__summary,
+.footer__cta,
+.footer__link,
+.link,
+.form__field {
     flex-grow: 1;
+}
+
+.hero__cta,
+.social__accounts {
+    gap: 0.5rem;
 }
 
 .header__nav .nav__links,
 .header__nav .link,
 .chip,
 .hero__cta,
-.hero__cta .cta {
+.hero__cta .cta,
+.footer__cta .cta {
     border-radius: 100px;
 }
 
@@ -117,7 +153,8 @@
 .hero .chip,
 .hero .testimonial,
 .hero .experience,
-.hero__cta {
+.hero__cta,
+.footer {
     font-family: var(--primary-font-family);
 }
 
@@ -141,34 +178,31 @@
     background-color: rgba(256, 256, 256, 0.2);
     bottom: 2rem;
     border: 2px solid #C9C9C9;
-    gap: 0.5rem;
     font-weight: 300;
 }
 .nav__links {
     background-color: var(--secondary-color);
-    flex-grow: 1;
-    justify-content: space-between;
 }
 
 .link {
     text-decoration: none;
-    align-items: center;
     color: var(--on-secondary-color);
     padding: 0.5rem 2rem;
-    background-color: var(--secondary-color);
 }
 .hero__cta .cta {
     background-color: transparent;
 }
 .link:hover,
-.link.active {
+.link.active,
+.form__icon-button {
     background-color: var(--primary-color);
     color: var(--on-primary-color);
 }
 .header__nav .link.active {
     font-weight: bold;
 }
-.brand__link .link {
+.brand__link .link,
+.footer__link .link {
     padding: 0;
 }
 .brand__logo {
@@ -176,7 +210,9 @@
 }
 .header__nav .nav__link:nth-child(2),
 .header__nav .nav__link:nth-child(3),
-.header__nav .nav__link:nth-child(4) {
+.header__nav .nav__link:nth-child(4),
+.hero .chip,
+.subscription-form .form__field {
     order: -1;
 }
 
@@ -193,7 +229,6 @@
 .hero .experience {
     right: 3rem;
     top: 60%;
-    flex-direction: column;
     align-items: flex-end;
 }
 .hero .experience .experience__count {
@@ -231,4 +266,78 @@
     height: 500px;
     border-radius: 100%;
     margin-inline: auto;
+}
+
+.footer,
+.social__account .icon {
+    color: #FFFFFF;
+}
+
+.footer,
+.footer__body {
+    gap: 1.5rem;
+}
+.footer {
+    background-color: #272727;
+    padding-block: 1rem;
+}
+.footer__cta {
+    width: 100%;
+}
+.footer__heading {
+    font-size: 3rem;
+    padding-block: 1rem;
+}
+
+.social__account .icon,
+.footer__section__heading {
+    font-size: 1.25rem;
+}
+
+.footer__section__heading {
+    white-space: nowrap;
+}
+
+.form__icon-button,
+.form__field {
+    border: none;
+    padding: 0.5rem;
+}
+.subscription-form .form__field {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+.subscription-form .form__icon-button {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.nav__links,
+.footer__cta,
+.footer__copyrights {
+    justify-content: space-between;
+}
+
+.copyrights,
+.footer__copyrights .link {
+    text-transform: capitalize;
+}
+
+.footer__section {
+    gap: 1rem;
+}
+
+.footer__summary {
+    justify-content: space-between;
+}
+
+.footer__copyrights .footer__link {
+    padding: 0 0.5rem;
+}
+.footer :not(.footer__copyrights) .footer__links {
+    gap: 0.75rem;
+}
+
+.footer__copyrights .footer__link:last-child {
+    border-left: 1px solid #FFFFFF;
 }

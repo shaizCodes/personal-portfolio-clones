@@ -10,12 +10,15 @@
     <link rel="stylesheet" href="./index.css">
     <!-- Google Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_outward" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=send" />
+    <!-- Font Awesome Kit -->
+    <script src="https://kit.fontawesome.com/cbff8bfa15.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="header">
         <nav class="header__nav nav">
             <ul class="nav__links max-width-limit">
-                <li class="nav__link brand__link"><a href="#" class="link"><img src="./assets/brand-logo.svg" alt="Brand logo" class="brand__logo"></a></li>
+                <li class="nav__link brand__link"><a href="#" class="link"><img src="./assets/brand-logo-center-aligned.svg" alt="Brand logo" class="brand__logo"></a></li>
                 <li class="nav__link"><a href="#" class="link active">Home</a></li>
                 <li class="nav__link"><a href="#" class="link">About</a></li>
                 <li class="nav__link"><a href="#" class="link">Service</a></li>
@@ -37,5 +40,61 @@
             <a href="#" class="cta link">Hire me</a>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="footer__cta max-width-limit">
+            <h2 class="footer__heading">Lets Connect there</h2>
+            <div>
+                <a href="#" class="cta link active">Hire me<span class="material-symbols-outlined">arrow_outward</span></a>
+            </div>
+        </div>
+        <hr class="horizontal-line">
+        <div class="footer__body">
+            <div class="footer__section footer__summary">
+                <div class="brand__link"><img src="./assets/brand-logo-left-aligned.svg" alt="JCREA Brand Logo" class="brand__logo"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.</p>
+                <ul class="social__accounts">
+                    <li class="social__account"><a href="#" class="icon"><span class="fa-brands fa-facebook"></span></a></li>
+                    <li class="social__account"><a href="#" class="icon"><span class="fa-brands fa-youtube"></span></a></li>
+                    <li class="social__account"><a href="#" class="icon"><span class="fa-brands fa-whatsapp"></span></a></li>
+                    <li class="social__account"><a href="#" class="icon"><span class="fa-brands fa-instagram"></span></a></li>
+                    <li class="social__account"><a href="#" class="icon"><span class="fa-brands fa-twitter"></span></a></li>
+                </ul>
+            </div>
+            <div class="footer__section navigation">
+                <h3 class="footer__section__heading">Navigation</h3>
+                <ul class="footer__links">
+                    <li class="footer__link"><a href="#" class="link">Home</a></li>
+                    <li class="footer__link"><a href="#" class="link">About us</a></li>
+                    <li class="footer__link"><a href="#" class="link">Service</a></li>
+                    <li class="footer__link"><a href="#" class="link">Resume</a></li>
+                    <li class="footer__link"><a href="#" class="link">Project</a></li>
+                </ul>
+            </div>
+            <div class="footer__section contact">
+                <h3 class="footer__section__heading">Contact</h3>
+                <ul class="footer__links">
+                    <li class="footer__link"><a href="#" class="link">+20 11 43 63 73 41</a></li>
+                    <li class="footer__link"><a href="#" class="link">fawzisayed1209@gmail.com</a></li>
+                    <li class="footer__link"><a href="#" class="link">fawziuiux.com</a></li>
+                </ul>
+            </div>
+            <div class="footer__section latest-info">
+                <h3 class="footer__section__heading">Get the latest information</h3>
+                <form action="#" id="subscription-form" class="form subscription-form">
+                    <button class="form__icon-button"><span class="material-symbols-rounded">send</span></button>
+                    <input type="email" class="form__field" placeholder="Email Address" id="email" required>
+                </form>
+            </div>
+        </div>
+        <hr class="horizontal-line">
+        <div class="footer__copyrights">
+            <p class="copyrights">Copyright &copy; 2023 Fawzuiux. All rights reserved.</p>
+            <ul class="footer__links">
+                <li class="footer__link"><a href="#" class="link">User terms &amp; conditions</a></li>
+                <li class="footer__link"><a href="#" class="link">Privacy policy</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
