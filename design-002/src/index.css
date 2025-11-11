@@ -303,6 +303,7 @@
 .form__field {
     border: none;
     padding: 0.5rem;
+    outline: none;
 }
 .subscription-form .form__field {
     border-top-left-radius: 12px;
@@ -311,6 +312,7 @@
 .subscription-form .form__icon-button {
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
+    cursor: pointer;
 }
 
 .nav__links,
