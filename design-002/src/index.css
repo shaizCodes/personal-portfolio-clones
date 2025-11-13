@@ -58,8 +58,13 @@
     padding-block-start: 2rem;
     overflow: hidden;
 }
-.chip {
+
+.chip,
+.button {
     display: inline-flex;
+}
+
+.chip {
     border: 1px solid var(--secondary-color);
     color: var(--secondary-color);
     font-weight: 400;
@@ -78,6 +83,7 @@
 
 .header__nav,
 .hero__heading,
+.section,
 .footer {
     padding-inline: 3rem;
 }
@@ -102,6 +108,10 @@
 .hero__image,
 .hero .experience,
 .hero__cta,
+.why-hire-me,
+.section__body,
+.records,
+.section__ctas,
 .footer,
 .footer__cta,
 .footer__body,
@@ -118,6 +128,7 @@
 
 .hero,
 .hero .experience,
+.section__body,
 .footer,
 .footer__section,
 :not(.footer__copyrights) > .footer__links {
@@ -155,6 +166,7 @@
 .hero .testimonial,
 .hero .experience,
 .hero__cta,
+.section,
 .footer {
     font-family: var(--primary-font-family);
 }
@@ -326,8 +338,9 @@
     text-transform: capitalize;
 }
 
-.footer__section {
-    gap: 1rem;
+.footer__section,
+.section__body {
+    gap: 1.5rem;
 }
 
 .footer__summary {
@@ -343,4 +356,66 @@
 
 .footer__copyrights .footer__link:last-child {
     border-left: 1px solid #FFFFFF;
+}
+
+.section {
+    gap: 1rem;
+}
+.why-hire-me {
+    background-color: #F2F4F7;
+    border-radius: 30px;
+    padding-block: 3rem;
+}
+.section__body {
+    gap: 2rem;
+    padding-right: 2rem;
+}
+
+.section__heading {
+    font-size: 3rem;
+}
+.section__heading .color--primary {
+    display: inline-block;
+}
+.section__heading .color--primary::first-letter {
+    text-transform: uppercase;
+}
+.section__text {
+    color: #98A2B3;
+    font-size: 1.1rem;
+}
+.card__heading {
+    color: #1D2939;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.card__body {
+    color: #667085;
+    font-size: 1.1rem;
+}
+.section__image {
+    /* width: 500px; */
+    padding-block: 2rem;
+}
+.section__image .image {
+    width: 100%;
+}
+.section__body {
+    padding-block: 1rem;
+    justify-content: center;
+}
+.why-hire-me .section__body .section__text {
+    width: 58%;
+}
+.button {
+    border: 1px solid #151515;
+    color: #151515;
+    font-weight: bolder;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 18px;
+    font-size: 1.5rem;
+}
+.records > * {
+    flex-grow: 1;
 }
