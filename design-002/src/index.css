@@ -363,8 +363,6 @@
 }
 .why-hire-me {
     background-color: #F2F4F7;
-    border-radius: 30px;
-    padding-block: 3rem;
 }
 .section__body {
     gap: 2rem;
@@ -418,4 +416,119 @@
 }
 .records > * {
     flex-grow: 1;
+}
+
+
+.section {
+    border-radius: 30px;
+}
+
+.section .text__section {
+    padding-block: 3rem;
+}
+
+.my-services {
+    background-color: #171717;
+    color: white;
+    position: relative;
+    padding-block-end: 1rem;
+}
+
+.services.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.25rem;
+}
+.service__card {
+    flex: 1 1 auto;
+}
+.text__section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.text__section .section__description {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+
+.decorators .decorator:nth-child(1) {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    width: 280px;
+}
+.decorators .decorator:nth-child(2) {
+    position: absolute;
+    top: 20px;
+    left: 35%;
+    width: 180px;
+}
+.decorators .decorator:nth-child(3) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 350px;
+}
+
+.service__card {
+    border: 1px solid #9E9D9D;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+}
+
+.service__card__heading {
+    padding: 1.5rem 1.25rem 1rem 1.25rem;
+    border-bottom: 1px solid #9E9D9D;
+}
+.service__card__body {
+    padding-top: 2rem;
+    position: relative;
+}
+.service__card__body::after {
+    content: '';
+    /* background-color: #171717; */
+    backdrop-filter: blur(100px);
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 35px;
+    z-index: 1;
+}
+.service__card__image {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+.service__card .icon-button {
+    position: absolute;
+    background-color: #1D2939;
+    padding: 1rem;
+    border-radius: 50%;
+    bottom: 4px;
+    right: 4px;
+    z-index: 2;
+}
+
+.carousal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-block: 1.5rem;
+}
+.carousal-button {
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    padding: 0.35rem;
+}
+.carousal-button.active {
+    background-color: var(--primary-color);
+    width: 50px;
 }
